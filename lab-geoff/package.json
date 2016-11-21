@@ -1,0 +1,11 @@
+{
+  "name": "401-lab-03-geoff",
+  "version": "1.0.0",
+  "description": "Assignment is to read three files and console log the first 8 bytes in hex of each file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "geoff-cox",
+  "license": "ISC"
+}
