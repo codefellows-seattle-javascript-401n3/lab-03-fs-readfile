@@ -5,7 +5,7 @@ const fs = require('fs');
 function returnShit(results) {
   console.log(results);
   return results;
-}
+};
 
 function reader(file, file2, file3, callback) {
   let results = [];
