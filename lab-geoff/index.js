@@ -1,4 +1,8 @@
 'use strict'
-let fileReader = require('./lib/fileReader.js');
+let files = require('./lib/fileReader.js');
 
-fileReader();
+files.fileReader(function() {
+  console.log(files.fileone)
+  // console.log(file.fileOne)
+})
+// console.log(files.fileone);
