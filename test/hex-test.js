@@ -25,7 +25,7 @@ describe('should return an array', function() {
 //${__dirname} is the absolute path to your file from the root of the computer ( ~ ).
 
     let path1 = `${__dirname}/../data/one.txt`;
-    let path2 = `${__dirname}/../data/two.txt`;
+    let path2 = __dirname + '/../data/two.txt';
     let path3 = `${__dirname}/../data/three.txt`;
 
     readAll(path1, path2, path3, runTests);
