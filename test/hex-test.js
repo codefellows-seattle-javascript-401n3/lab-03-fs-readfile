@@ -28,8 +28,8 @@ describe('should return an array', function() {
     let path2 = `${__dirname}/../data/two.txt`;
     let path3 = `${__dirname}/../data/three.txt`;
 
-    readAll(path1, path2, path3, cb);
-    function cb(valueHexArray) {
+    readAll(path1, path2, path3, runTests);
+    function runTests(valueHexArray) {
       assert.equal(valueHexArray.length, 3);
       assert.equal(Array.isArray(valueHexArray), true);
       assert.deepEqual(valueHexArray, [ '4c6f72656d206970', '53434f5454545454', '736f6d6520626967' ]);
