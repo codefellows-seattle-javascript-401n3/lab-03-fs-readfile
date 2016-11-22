@@ -4,10 +4,10 @@
   "description": "Code Fellows 401 - Lab-03 fs-readfile",
   "main": "index.js",
   "directories": {
-    "test": "mocha"
+    "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "Kyle Winckler",
