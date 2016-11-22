@@ -19,7 +19,7 @@ module.exports.splice = function (pathArray, printcb, next) {
   fs.readFile(pathArray[0], function (err, content) {
     if (err) printcb(err);
 
-    const result = content.toString('utf8',0,8);
+    const result = content.toString('hex',0,8);
 
     printcb(null, result);
 
