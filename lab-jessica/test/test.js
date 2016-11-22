@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = require('assert');
 const read = require('../lib/read.js');
 
