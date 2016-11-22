@@ -1,3 +1,5 @@
 const read = require('./lib/read.js');
 
-read();
+read(function(results) {
+  return results;
+});
