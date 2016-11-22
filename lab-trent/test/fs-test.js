@@ -21,5 +21,20 @@ describe('LogFile', function() {
           done(new Error('Wrong number of files read.'));
       });
     });
+    it('should return an array of the same size of file names given', function(done) {
+      logFile.readFiles(['one.txt', 'two.txt', 'three.txt'], function(err, data) {
+        if (data.length == 3)
+          done();
+        else
+          done(new Error('Wrong number of files read.'));
+      });
+    });
+    it('should return the data in the correct order that the files were given in', function(done) {
+      logFile.readFiles(['one.txt', 'two.txt', 'three.txt'], function(err, data) {
+        assert.equal(data[0].toString('hex').substr(0, 16), '313a2057686f6168');
+        assert.equal(data[1].toString('hex').substr(0, 16), '323a2057686f6168');
+        assert.equal(data[2].toString('hex').substr(0, 16), '333a2057686f6168');
+      });
+    });
   });
 });
