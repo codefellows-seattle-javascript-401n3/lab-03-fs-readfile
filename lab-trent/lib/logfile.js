@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-function readFiles(files, callback) {
+module.exports.readFiles = function(files, callback) {
   let fileContents = [];
   let finished = 0;
   for (let i = 0;i < files.length;i++) {
@@ -10,25 +10,7 @@ function readFiles(files, callback) {
       fileContents[i] = data;
       finished++;
       if (finished >= files.length)
-        callback(fileContents);
+        callback(err, fileContents);
     });
   }
-}
-
-function printInOrder(data) {
-  for (let i = 0;i < data.length;i++) {
-    console.log(data[i].toString('hex').substr(0, 16));
-  }
-}
-
-function readAndPrintFiles(files) {
-  readFiles(files, function(contents) {
-    printInOrder(contents);
-  });
-}
-
-module.exports = {
-  readFiles,
-  printInOrder,
-  readAndPrintFiles
 };
