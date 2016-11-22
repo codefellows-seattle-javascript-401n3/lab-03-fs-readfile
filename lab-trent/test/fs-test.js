@@ -19,6 +19,12 @@ describe('LogFile', function() {
         done();
       });
     });
+    it('should return an array of the same size of file names given this time with two files', function(done) {
+      logFile.readFiles(['./test/one.txt', './test/three.txt'], function(err, data) {
+        assert.strictEqual(data.length, 2);
+        done();
+      });
+    });
     it('should return the data in the correct order that the files were given in', function(done) {
       logFile.readFiles(['./test/one.txt', './test/two.txt', './test/three.txt'], function(err, data) {
         assert.equal(data[0].toString('hex').substr(0, 16), '313a2057686f6168');
