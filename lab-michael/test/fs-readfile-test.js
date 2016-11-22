@@ -4,7 +4,7 @@ const assert = require('assert');
 describe('Readfile Module', function() {
   describe('Testing method #readTheFile()', function() {
     it('will match the first 8 bits', function() {
-      
+      assert.equal()
     })
   })
 })
