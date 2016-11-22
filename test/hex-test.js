@@ -18,7 +18,11 @@ let readAll = require('../lib/reader');
 // });
 
 describe('should return an array', function() {
-  it('should return an array', function() {
-    assert.equal(Array.isArray(readAll()), true);
+  it('should push one item into an array', function(done) {
+    readAll(cb);
+    function cb(valueHexArray) {
+      assert.equal(valueHexArray, true);
+      done();
+    }
   });
 });
