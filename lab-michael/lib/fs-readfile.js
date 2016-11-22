@@ -6,17 +6,17 @@ module.exports = function(cb) {
     if (err) {
       console.log(err);
     }
-    textArray.push(data.toString());
+    textArray.push(data.toString('hex', 0, 8));
     fs.readFile(__dirname + '/../data/two.txt', function(err, data) {
       if (err) {
         console.log(err);
       }
-      textArray.push(data.toString());
+      textArray.push(data.toString('hex', 0, 8));
       fs.readFile(__dirname + '/../data/three.txt', function(err, data) {
         if (err) {
           console.log(err);
         }
-        textArray.push(data.toString());
+        textArray.push(data.toString('hex', 0, 8));
         cb(textArray);
       });
     });
