@@ -17,7 +17,7 @@ function readFiles(files, callback) {
 
 function printInOrder(data) {
   for (let i = 0;i < data.length;i++) {
-    console.log(data[i].toString('hex'));
+    console.log(data[i].toString('hex').substr(0, 16));
   }
 }
 
