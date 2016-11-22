@@ -19,9 +19,20 @@ let readAll = require('../lib/reader');
 
 describe('should return an array', function() {
   it('should push one item into an array', function(done) {
-    readAll(cb);
+    // let path1 = '../data/one.txt';
+    // let path2 = '../data/two.txt';
+    // let path3 = '../data/three.txt';
+    //these threw errors because of where mocha lives/where i was calling from since mocha was installed at the root ({__dirname}), and was being called...OR an absolute path is necessary
+
+    let path1 = `${__dirname}/../data/one.txt`;
+    let path2 = `${__dirname}/../data/two.txt`;
+    let path3 = `${__dirname}/../data/three.txt`;
+
+    readAll(path1, path2, path3, cb);
     function cb(valueHexArray) {
-      assert.equal(valueHexArray, true);
+      assert.equal(valueHexArray.length, 3);
+      assert.equal(Array.isArray(valueHexArray), true);
+      assert.deepEqual(valueHexArray, [ '4c6f72656d206970', '53434f5454545454', '736f6d6520626967' ]);
       done();
     }
   });
