@@ -1,5 +1,5 @@
-const fileReader = require('./lib/fs-readfile.js')
+const fileReader = require('./lib/fs-readfile.js');
 
 fileReader(function(data) {
   console.log(data);
-})
+});
