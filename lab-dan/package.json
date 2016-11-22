@@ -1,0 +1,22 @@
+{
+  "name": "lab-dan",
+  "version": "1.0.0",
+  "description": "Lab 3",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Dan Peters",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-plumber": "^1.1.0",
+    "mocha": "^3.1.2"
+  }
+}
