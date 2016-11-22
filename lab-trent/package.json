@@ -1,0 +1,25 @@
+{
+  "name": "lab-trent",
+  "version": "1.0.0",
+  "description": "Trent's fs lab for code 401.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titandino/lab-03-fs-readfile.git"
+  },
+  "author": "Trenton Kress",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/titandino/lab-03-fs-readfile/issues"
+  },
+  "homepage": "https://github.com/titandino/lab-03-fs-readfile#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}
