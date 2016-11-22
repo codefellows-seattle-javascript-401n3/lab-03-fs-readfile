@@ -47,30 +47,40 @@ let path1 = './lib/one.txt';
 let path2 = './lib/two.txt';
 let path3 = './lib/three.txt';
 
-let readAll = function(callback) {
+// let readAll = function(callback) {
+//   let hexArray = [];
+//   fs.readFile(path1, function(err, data) {
+//     if(err) {
+//       process.stdout.write(err);
+//     }
+//     hexArray.push(data.slice(0,9).toString('hex'));
+//     //process.stdout.write(data.slice(0,9).toString('hex'));
+//   });
+//   fs.readFile(path2, function(err, data) {
+//     if(err) {
+//       process.stdout.write(err);
+//     }
+//     hexArray.push(data.slice(0,9).toString('hex'));
+//   });
+//   fs.readFile(path3, function(err, data) {
+//     if(err) {
+//       process.stdout.write(err);
+//     }
+//     hexArray.push(data.slice(0,9).toString('hex'));
+//   });
+//   if(hexArray[2]){
+//     return;
+//   }
+//   callback(fs.readFile());
+// };
+// readAll();
+let paths = [path1, path2, path3];
+let readAll = function(paths, cb) {
   let hexArray = [];
-  fs.readFile(path1, function(err, data) {
-    if(err) {
-      process.stdout.write(err);
-    }
-    hexArray.push(data.slice(0,9).toString('hex'));
-    //process.stdout.write(data.slice(0,9).toString('hex'));
+  paths.forEach(function(path){
+    fs.readFile(path, function(err, data) {
+      hexArray.push(data.slice(0,9).toString('hex'));
+    });
   });
-  fs.readFile(path2, function(err, data) {
-    if(err) {
-      process.stdout.write(err);
-    }
-    hexArray.push(data.slice(0,9).toString('hex'));
-  });
-  fs.readFile(path3, function(err, data) {
-    if(err) {
-      process.stdout.write(err);
-    }
-    hexArray.push(data.slice(0,9).toString('hex'));
-  });
-  if(hexArray[2]){
-    return;
-  }
-  callback(fs.readFile());
 };
 readAll();
