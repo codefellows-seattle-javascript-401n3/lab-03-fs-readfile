@@ -1,7 +1,6 @@
 'use strict';
 
 let assert = require('assert');
-let fs = require('fs');
 let readAll = require('../lib/reader');
 
 //don't test other libraries
@@ -23,6 +22,7 @@ describe('should return an array', function() {
     // let path2 = '../data/two.txt';
     // let path3 = '../data/three.txt';
     //these threw errors because of where mocha lives/where i was calling from since mocha was installed at the root ({__dirname}), and was being called...OR an absolute path is necessary
+//${__dirname} is the absolute path to your file from the root of the computer ( ~ ).
 
     let path1 = `${__dirname}/../data/one.txt`;
     let path2 = `${__dirname}/../data/two.txt`;
