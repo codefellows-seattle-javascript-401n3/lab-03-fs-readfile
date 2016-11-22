@@ -1,20 +1,51 @@
 let fs = require('fs');
+let oneString;
+let twoString;
+let threeString;
+let allData = [];
 
-fs.readFile('./lib/one.txt', function(err, data){
-  if(err) throw err;
-  let oneString = data.toString();
-  let dataOne = oneString.substring(0,5);
-  console.log('file one: ' + dataOne);
-  fs.readFile('./lib/two.txt', function(err, data){
+// function otherFunction(data) {
+//   console.log(data)
+// }
+//
+// var file = fs.readFile('blah')
+// otherFunction(file)
+//
+// fs.readFile('blah.txt', function(data) {
+//   return data
+//   otherFunction(data)
+// })
+
+
+//so i'm going to, instead of running a log at the end of each function, i'm going to push that specific file's data into an array.  then at the very end i'm going to call my callback, which is actually the testing function.
+
+function readHex(cb) {
+  fs.readFile('./lib/one.txt', function(err, data){
     if(err) throw err;
-    let twoString = data.toString();
-    let dataTwo = twoString.substring(0,5);
-    console.log('file two: ' + dataTwo);
-    fs.readFile('./lib/three.txt', function(err, data){
+    oneString = data.toString();
+    let dataOne = oneString.substring(0,5);
+    allData.push(dataOne);
+    fs.readFile('./lib/two.txt', function(err, data){
       if(err) throw err;
-      let threeString = data.toString();
-      let dataThree= threeString.substring(0,5);
-      console.log('file three: ' + dataThree);
+      twoString = data.toString();
+      let dataTwo = twoString.substring(0,5);
+      // console.log('data2: ' + dataTwo);
+      allData.push(dataTwo);
+      fs.readFile('./lib/three.txt', function(err, data){
+        if(err) throw err;
+        threeString = data.toString();
+        let dataThree= threeString.substring(0,5);
+        allData.push(dataThree);
+        cb(allData);
+      });
     });
   });
-});
+}
+
+module.exports = {
+  read: readHex,
+  one: oneString,
+  two: twoString,
+  three: threeString,
+  data: allData
+};
