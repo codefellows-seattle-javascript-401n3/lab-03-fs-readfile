@@ -8,11 +8,10 @@ let index = require('../index.js');
 
 describe('fileReader.js', function() {
   describe('fileReader()', function() {
-    it('a function is exported from fileReader.js', function(done) { //done will be the callback
-      console.log('testingOne');
-
+    it('logs 3 files in order', function(done) { //done will be the callback
       fileReader(function(data) {
          // create assertions for that data
+         assert.equal(data, [])
          done()
       })
     })
