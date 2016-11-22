@@ -1,12 +1,15 @@
 'use strict'
-let mocha = require('mocha');
 let assert = require('assert');
 let fileReader = require('../lib/fileReader.js')
 
 describe('fileReader.js', function() {
-  describe('intakeorsomething(this may not matter until there are multiple functions)', function() {
-    it('there is a function to read files', function() {
-      assert.ok(fileReader)
+  describe('fileReader()', function() {
+    it('a value is returned', function(done) { //done will be the callback
+      fileReader();
+      assert.ok(fileOne)
+      done();
     })
   })
 })
+
+//async mocha testing needs a done function to be called after task completes
