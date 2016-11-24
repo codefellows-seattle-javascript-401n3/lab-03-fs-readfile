@@ -6,16 +6,16 @@ const read = require('../lib/read');
 describe('a read module', function() {
   describe('reader()', function() {
     it('should produce three results', function(done) {
-      read.reader('./texts/one.txt', './texts/two.txt', './texts/three.txt', function(res) {
+      read.readFiles(['./texts/one.txt', './texts/two.txt', './texts/three.txt'], function(res) {
         assert.equal(res.length === 3, true);
         done();
       });
     });
     it('should have three logs in the correct order', function(done) {
-      read.reader('./texts/one.txt', './texts/two.txt', './texts/three.txt', function(res) {
+      read.readFiles(['./texts/one.txt', './texts/two.txt', './texts/three.txt'], function(res) {
         assert.equal(res[0], '4675726e69747572');
         assert.equal(res[1], '426c75652063726f');
-        assert.equal(res[1], '426c75652063726f');
+        assert.equal(res[2], '536f207368616d65');
         done();
       });
     });
