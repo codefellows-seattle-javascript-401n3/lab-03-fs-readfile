@@ -1,0 +1,17 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "lab03 fs-readfile",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "carolina",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.1.2"
+  }
+}
