@@ -1,0 +1,19 @@
+{
+  "name": "lab-kyle",
+  "version": "1.0.0",
+  "description": "Code Fellows 401 - Lab-03 fs-readfile",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "Kyle Winckler",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "mocha": "^3.1.2"
+  }
+}
