@@ -1,0 +1,19 @@
+{
+  "name": "lab-jonathan",
+  "version": "1.0.0",
+  "description": "pulling hex characters from files",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Jonathan D",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs": "0.0.1-security",
+    "mocha": "^3.1.2"
+  }
+}
