@@ -1,0 +1,4 @@
+3: It's a THREE! Look at that, a number three inside this file. Isn't that neat?
+Here's some more extra garbage text that is completely meaningless but I want to fill up some space
+to show that they read in the right order even though it should be obvious that it works just by
+taking a quick glance at how the data from each file is stored in the array!
