@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 let fs = require('fs');
 
 module.exports = function(cb) {
@@ -16,7 +16,7 @@ module.exports = function(cb) {
         data.push(fileThree);
         console.log(fileThree);
         cb(data);
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
