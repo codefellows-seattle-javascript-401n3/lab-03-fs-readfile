@@ -1,20 +1,29 @@
 {
   "name": "lab-03-fs-readfile",
   "version": "1.0.0",
-  "description": "A Readfile Program",
+  "description": "Lab using the fs",
   "main": "index.js",
-  "directories": {
+  "scripts": {
     "test": "mocha"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvershotm1/lab-03-fs-readfile.git"
   },
+  "keywords": [
+    "filesystem",
+    "fs"
+  ],
   "author": "Michael Bishop",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silvershotm1/lab-03-fs-readfile/issues"
+  },
+  "homepage": "https://github.com/silvershotm1/lab-03-fs-readfile#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^3.0.1",
-    "mocha": "^3.1.2"
+    "mocha": "^3.2.0"
   }
 }
