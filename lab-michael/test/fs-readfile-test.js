@@ -1,3 +1,5 @@
+'use strict';
+
 const readTheFile = require('../lib/fs-readfile.js');
 const assert = require('assert');
 
@@ -9,6 +11,7 @@ describe('Readfile Module', function() {
         assert.equal(data[1], '3539366637353732');
         assert.equal(data[2], '3438366636343666');
         done();
+        console.log(data);
       });
     });
   });
