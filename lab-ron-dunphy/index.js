@@ -1,7 +1,7 @@
 'use strict';
 
-const program = require('./lib/read-files.js');
+const programReadFile = require('./lib/read-files.js');
 
-module.exports = exports = {};
-
-program();
+programReadFile(function(data) {
+  console.log(data);
+});
