@@ -1,7 +1,10 @@
 'use strict';
 
-const programReadFile = require('./lib/read-files.js');
+const readFile = require('./lib/read-files.js');
 
-programReadFile(function(data) {
-  console.log(data);
-});
+const readFileData = () => {
+  readFile((err, data) =>{
+    err ? console.log(err) : console.log(data);
+  });
+};
+readFileData();
